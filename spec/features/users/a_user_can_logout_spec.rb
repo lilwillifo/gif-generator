@@ -11,7 +11,7 @@ describe 'A logged-in user' do
     click_on 'Log In'
 
     click_on 'Logout'
-    
+
     expect(page).to have_content('Successfully logged out!')
     expect(current_path).to eq('/')
   end

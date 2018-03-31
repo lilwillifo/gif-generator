@@ -7,5 +7,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/login', to: 'sessions#destroy'
 
+  namespace 'admin' do
+    resources :gifs, only: [:create]
+  end
+
   resources :users, only: [:new, :index, :create, :show]
 end
