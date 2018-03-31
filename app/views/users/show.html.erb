@@ -1,1 +1,2 @@
-<%= @user.username %>
+Welcome, <%= current_user.username %>
+<%= link_to 'Logout', login_path, method: 'delete' %>
