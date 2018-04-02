@@ -25,8 +25,7 @@ require 'rails_helper'
         click_link 'Add to Favorites'
       end
 
-
-      expect(current_path).to eq(favorites_path)
+      expect(current_path).to eq(user_path(user))
       expect(page).to have_content('Added to your favorite list!')
       expect(page).to have_css("#img-#{gif_1.id}")
     end
