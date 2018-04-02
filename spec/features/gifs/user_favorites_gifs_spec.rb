@@ -19,8 +19,11 @@ require 'rails_helper'
       gif_2 = create(:gif, category: category)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      within ".#{gif_1.image_path}" do
-        find('far fa-heart').click
+      visit gifs_path
+      save_and_open_page
+
+      within "#img-#{gif_1.id}" do
+        click_link 'Add to Favorites'
       end
 
       expect(page).to have_content('Added to your favorite list!')

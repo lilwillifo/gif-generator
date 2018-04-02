@@ -7,6 +7,8 @@
 <% end %>
 
 <% @gifs.each do |gif| %>
+<div id="img-<%=gif.id%>">
  <img src=<%= gif.image_path %> class='gif.image_path'>
- <i class="far fa-heart"></i>
+ <%= link_to "<i class='far fa-heart'></i>".html_safe, root_path, title: 'Add to Favorites' %>
+</div>
 <% end %>
