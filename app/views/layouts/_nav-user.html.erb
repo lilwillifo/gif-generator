@@ -1,0 +1,8 @@
+<nav>
+  <%= link_to 'Son of a Gif!', root_path, class: 'nav_link' %>
+  <div>
+    <%= link_to 'Gifs', gifs_path, class: 'nav_link' %>
+    <%= link_to  "Favorites", user_path(current_user), class: 'nav_link' %></li>
+    <%= link_to 'Logout', login_path, method: :delete, class: 'nav_link' %>
+  </div>
+</nav>

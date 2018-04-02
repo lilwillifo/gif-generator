@@ -16,10 +16,12 @@ body {
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: #3E6990;
   top:0;
+  height: 60px;
   width: 100%;
+  align-items: center;
 }
 
 .nav_link {
