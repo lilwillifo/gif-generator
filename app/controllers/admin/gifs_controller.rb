@@ -5,7 +5,7 @@ class Admin::GifsController < ApplicationController
 
   def create
     category = Category.find_or_create_by(name: params[:category])
-    gif = category.gifs.new
+    gif = CreateGif.call(category)
     if gif.save
       flash[:notice] = "#{category.name} gif created!"
     else

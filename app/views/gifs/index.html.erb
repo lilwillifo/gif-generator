@@ -5,3 +5,7 @@
     <%= submit_tag 'Generate Gif' %>
   <% end %>
 <% end %>
+
+<% @gifs.each do |gif| %>
+  <%= img src=gif.image_path %>
+<% end %>
