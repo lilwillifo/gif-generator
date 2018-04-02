@@ -12,8 +12,8 @@ require 'rails_helper'
       click_on 'Log In'
 
       click_on 'Gifs'
-      # img = find('img[src="gif_1.image_path"]')
-      # expect(page).to have_content(img)
+      img = find('img[src="gif_1.image_path"]')
+      expect(page).to have_content(img)
       expect(page).to have_content(gif_2.image_path)
     end
     it 'and mark their favorites to see in their favorites list' do

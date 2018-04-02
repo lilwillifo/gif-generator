@@ -1,5 +1,4 @@
 class Admin::GifsController < ApplicationController
-
   def new
   end
 
