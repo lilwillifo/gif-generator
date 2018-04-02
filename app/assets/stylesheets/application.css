@@ -1,6 +1,21 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Arial';
   background-color: #E9F1F7;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height:100%
 }
 
 .title {
