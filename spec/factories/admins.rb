@@ -1,7 +1,7 @@
 FactoryBot.define do
-  factory :admin do
-    username 'important_person'
-    password 'kjdshf'
+  factory :admin, class: User do
+    sequence(:username) { |n| "Admin #{n}" }
+    password 'secretz'
     role 1
   end
 end
