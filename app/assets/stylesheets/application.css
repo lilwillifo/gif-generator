@@ -43,4 +43,5 @@ footer {
   background-color: #565554;
   color: #FFFFFF;
   font-size: 12px;
+  flex: 1 0 auto;
 }
