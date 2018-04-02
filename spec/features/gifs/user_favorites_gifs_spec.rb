@@ -20,16 +20,14 @@ require 'rails_helper'
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit gifs_path
-      save_and_open_page
 
       within "#img-#{gif_1.id}" do
         click_link 'Add to Favorites'
       end
 
+
+      expect(current_path).to eq(favorites_path)
       expect(page).to have_content('Added to your favorite list!')
-
-      click_on 'Favorites'
-
-      expect(page).to have_xpath("//img[contains(@src,'#{gif_1.image_path}')]")
+      expect(page).to have_css("#img-#{gif_1.id}")
     end
   end
