@@ -6,9 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(username: 'Margaret', password: 'test')
-categories = ['cats', 'puppers', 'celebrity', 'lol', 'programming', 'school']
+User.create!(username: 'Margaret', password: 'test', role: 1)
+
+categories = ['cats', 'puppers', 'lol', 'programming', 'school']
 categories.each do |category|
   category = Category.create!(name: category)
-  3.times { CreateGif.call(category)}
+  4.times { CreateGif.call(category)}
 end

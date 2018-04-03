@@ -32,6 +32,11 @@ img {
   color: red;
 }
 
+.category {
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
 .all_gifs {
   display: flex;
   flex-direction: row;
