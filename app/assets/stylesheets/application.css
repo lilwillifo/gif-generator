@@ -18,6 +18,23 @@ body {
   min-height:100%
 }
 
+img {
+  display: flex;
+  height: 250px;
+  margin: 10px;
+}
+
+.heart {
+  color: red;
+}
+
+.all_gifs {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .title {
   font-family: 'impact';
   font-size: 75px;
