@@ -1,10 +1,3 @@
-<% if current_user.admin? %>
-  <%= form_tag admin_gifs_path do %>
-    <%= label_tag :category %>
-    <%= search_field_tag :category %>
-    <%= submit_tag 'Generate Gif' %>
-  <% end %>
-<% end %>
 <div class= 'all_gifs'>
   <% @gifs.each do |gif| %>
   <div id="img-<%=gif.id%>">
