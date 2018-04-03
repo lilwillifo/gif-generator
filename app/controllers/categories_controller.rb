@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   def destroy
     category = Category.find(params[:id])
     category.destroy
-    redirect_to current_user
+    redirect_to gifs_path
   end
 
   private
