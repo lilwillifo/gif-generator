@@ -4,9 +4,6 @@ class Admin::GifsController < ApplicationController
   def new
   end
 
-  def index
-  end
-
   def create
     category = Category.find_or_create_by(name: params[:category])
     gif = CreateGif.call(category)

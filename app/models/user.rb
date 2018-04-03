@@ -4,6 +4,7 @@ class User < ApplicationRecord
   validates_uniqueness_of :username
   has_many :favorites
   has_many :gifs, through: :favorites
+  has_many :categories, through: :gifs
 
   enum role: %w(default admin)
 end
