@@ -40,6 +40,13 @@ form {
   align-items: center;
 }
 
+nav form {
+  display: flex;
+  margin: 10px;
+  flex-direction: row;
+  align-items: center;
+}
+
 .form_field {
   padding: 10px;
 }
@@ -71,7 +78,9 @@ form {
 
 .category {
   color: #FFFFFF;
-  font-size: 24px;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
 }
 
 .all_gifs {

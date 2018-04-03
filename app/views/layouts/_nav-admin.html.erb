@@ -2,9 +2,11 @@
   <%= link_to 'Son of a Gif!', root_path, class: 'nav_link' %>
     <div class='category'>
       <%= form_tag admin_gifs_path do %>
-        <%= label_tag :category %>
-        <%= search_field_tag :category %>
-        <%= submit_tag 'Generate Gif' %>
+      <div class='form_field'>
+        <%= label_tag :category, 'Category' %>
+        <%= search_field_tag :category, 'pupperz' %>
+      </div>
+        <%= submit_tag 'Generate Gif', class:'button' %>
       <% end %>
     </div>
       <div>
