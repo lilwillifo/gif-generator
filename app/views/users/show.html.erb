@@ -2,11 +2,11 @@
   <section>
     <h1>Welcome, <%= current_user.username %>!</h1>
     <h3>Your favorite gifs:</h3>
-    <% current_user.categories.each do |category| %>
-    <%= category.name %>
-    <% end %>
   </section>
   <div class='all_gifs'>
+    <% current_user.categories.each do |category| %>
+    <%= category.name %>    
+    <% end %>
     <% current_user.gifs.each do |gif| %>
     <div id="img-<%=gif.id%>">
      <img src=<%= gif.image_path %> class='gif.image_path'>
