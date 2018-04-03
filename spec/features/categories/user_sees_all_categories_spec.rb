@@ -14,7 +14,6 @@ describe 'A logged-in user' do
   it 'can see all their categories on favorite page' do
     user = create(:user)
     user.gifs = create_list(:gif, 3)
-    category_1, category_2, category_3 = create_list(:category, 3)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit user_path(user)
