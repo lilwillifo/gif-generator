@@ -16,7 +16,7 @@ describe 'A logged-in user' do
     category_1, category_2, category_3 = create_list(:category, 3)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit gifs_path
+    visit user_path(user)
 
     expect(page).to have_content(category_1.name)
     expect(page).to have_content(category_2.name)
