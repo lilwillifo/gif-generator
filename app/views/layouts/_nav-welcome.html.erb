@@ -1,10 +1,9 @@
   <nav>
+    <%= link_to 'Son of a Gif!', root_path, class: 'nav_link' %>
     <div class = 'nav_link'>
       <i class="fas fa-user-plus"></i>
-      <%= link_to 'Sign Up for an Account', new_user_path %>
-    </div>
-    <div class="nav_link">
+      <%= link_to 'Sign Up for an Account', new_user_path, class:'nav_link' %>
       <i class="fas fa-sign-in-alt"></i>
-      <%= link_to 'I already have an account', login_path %>
+      <%= link_to 'I already have an account', login_path, class:'nav_link' %>
     </div>
   </nav>
