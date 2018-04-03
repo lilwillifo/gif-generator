@@ -1,11 +1,14 @@
-Welcome, <%= current_user.username %>
-
-Your favorite gifs:
-<div class='all_gifs'>
-  <% current_user.gifs.each do |gif| %>
-  <div id="img-<%=gif.id%>">
-   <img src=<%= gif.image_path %> class='gif.image_path'>
-   <!-- <%= link_to "<i class='far fa-heart'></i>".html_safe, favorites_path, method: 'post', title: 'Add to Favorites' %> -->
+<main class='show'>
+  <section>
+    <h1>Welcome, <%= current_user.username %>!</h1>
+    <h3>Your favorite gifs:</h3>
+  </section>
+  <div class='all_gifs'>
+    <% current_user.gifs.each do |gif| %>
+    <div id="img-<%=gif.id%>">
+     <img src=<%= gif.image_path %> class='gif.image_path'>
+     <!-- <%= link_to "<i class='far fa-heart'></i>".html_safe, favorites_path, method: 'post', title: 'Add to Favorites' %> -->
+    </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
+</main>
