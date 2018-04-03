@@ -4,4 +4,10 @@ class FavoritesController < ApplicationController
     flash[:success] = 'Added to your favorite list!'
     redirect_to current_user
   end
+
+  def destroy
+    favorite = Favorite.find(params[:id])
+    favorite.destroy
+    redirect_to user_path(current_user)
+  end
 end

@@ -28,6 +28,10 @@ img {
   color: red;
 }
 
+.x {
+  color: red;
+}
+
 .all_gifs {
   display: flex;
   flex-direction: row;

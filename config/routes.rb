@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:new, :create, :show]
-  resources :gifs, only: [:index]
-  resources :favorites, only: [:create]
+  resources :gifs, only: [:index, :update]
+  resources :favorites, only: [:create, :destroy]
 end

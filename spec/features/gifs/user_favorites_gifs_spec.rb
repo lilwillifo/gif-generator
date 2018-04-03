@@ -29,4 +29,26 @@ require 'rails_helper'
       expect(page).to have_content('Added to your favorite list!')
       expect(page).to have_css("#img-#{gif_1.id}")
     end
+    it 'and can unfavorite a gif' do
+      user = create(:user)
+      category = create(:category)
+      gif_1 = create(:gif, category: category)
+      gif_2 = create(:gif, category: category)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+      visit gifs_path
+
+      within "#img-#{gif_1.id}" do
+        click_link 'Add to Favorites'
+      end
+
+      expect(user.favorites.count).to eq(1)
+
+      within "#img-#{gif_1.id}" do
+        click_link 'Remove from Favorites'
+      end
+
+      expect(page).to have_content('Removed from your favorite list!')
+      expect(user.favorites.count).to eq(0)
+    end
   end
