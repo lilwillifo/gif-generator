@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @categories = current_user.categories.order(:name).uniq
   end
 
   private
