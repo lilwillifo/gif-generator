@@ -9,4 +9,14 @@ class ApplicationController < ActionController::Base
   def current_admin?
     current_user && current_user.admin?
   end
+
+  private
+
+  def require_login
+    redirect_to '/' unless current_user
+  end
+
+  def require_admin
+    render file: "/public/404" unless current_admin?
+  end
 end

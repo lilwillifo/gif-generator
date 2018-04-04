@@ -16,9 +16,11 @@
   <% else %>
     <%= render partial: 'layouts/nav-user' %>
   <% end %>
-  <% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, class: name %>
-  <% end %>
+  <div class='flash'>
+    <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: name %>
+    <% end %>
+  </div>
     <%= yield %>
     <%= render partial: 'layouts/footer' %>
   </body>

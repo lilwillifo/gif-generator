@@ -1,18 +1,34 @@
-<div class= 'all_gifs'>
-  <% @categories.each do |category| %>
-    <div class=<%=category.name%>>
-      <h2><%= category.name %></h2>
-      <% if current_admin? %>
-        <%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, category_path(category), method: 'delete', title: 'Delete Category' %>
+<main class='show'>
+
+<h1>All Tha Gifs!</h1>
+  <% if current_admin? %>
+    <div class='generate_category'>
+      <%= form_tag admin_gifs_path do %>
+      <div class='form_field'>
+        <%= label_tag :category, 'Category' %>
+        <%= search_field_tag :category, 'puppers' %>
+      </div>
+        <%= submit_tag 'Generate Gif', class:'button' %>
       <% end %>
     </div>
+  <% end %>
 
-    <% category.gifs.each do |gif| %>
-    <div id="img-<%=gif.id%>">
-     <img src=<%= gif.image_path %>>
-     <%= link_to "<i class='far fa-heart'></i>".html_safe, favorites_path(gif_id: gif.id), method: 'post', title: 'Add to Favorites', class: 'heart' %>
-    </div>
+    <% @categories.each do |category| %>
+        <div class='category_name' id=<%=category.name%>>
+          <h2><%= category.name %>
+          <% if current_admin? %>
+            (<%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, category_path(category), method: 'delete', title: 'Delete Category', class: 'trash' %>)
+          <% end %></h2>
+        </div>
+
+        <div class= 'all_gifs'>
+        <% category.gifs.each do |gif| %>
+          <div id="img-<%=gif.id%>">
+           <img src=<%= gif.image_path %>>
+           <%= link_to "<i class='far fa-heart'></i>".html_safe, user_favorites_path(current_user, gif_id: gif.id), method: 'post', title: 'Add to Favorites', class: 'heart' %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
 
-  <% end %>
-</div>
+</main>

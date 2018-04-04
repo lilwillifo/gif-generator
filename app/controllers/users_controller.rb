@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :require_login, only: [:show]
   def new
     @user = User.new
   end
@@ -13,9 +13,6 @@ class UsersController < ApplicationController
       flash[:error] = 'Sorry, that username has been taken.'
       redirect_to new_user_path
     end
-  end
-
-  def index
   end
 
   def show
