@@ -1,21 +1,15 @@
 # README
 
-Things you may want to cover:
+An application for users to see gifs sorted by category and save their favorites.
 
-* Ruby version
+Admins can type a word and in the navbar click generate gif. This will add a random gif (powered by Giphy api) associated with the typed word to the application. It will also create a new category of that word if one does not exist already
 
-* System dependencies
+Application Deployed to Heroku at : https://calm-brook-77558.herokuapp.com/
 
-* Configuration
+To open on your own computer: git clone, run bundle, rails s, run rake db:setup and open your browser in localhost:3000
 
-* Database creation
+Run the test suite by typing rake db:test:prepare then RSpec
 
-* Database initialization
+Ruby version 2.5.0
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions: Heroku: https://aqueous-eyrie-95923.herokuapp.com/
-
-* ...
+Database postgresql
