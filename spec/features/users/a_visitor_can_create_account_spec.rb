@@ -12,6 +12,7 @@ describe 'A visitor' do
 
       expect(current_path).to eq("/users/#{User.last.id}")
       expect(page).to have_content("giffymcgifferson")
+      expect(page).to have_content("GIF OUTTA HERE! Looks like you don't have any favorites yet!")
     end
     it 'and it cant create an account with a username thats already in use' do
       user = create(:user)

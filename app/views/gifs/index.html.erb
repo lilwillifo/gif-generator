@@ -14,7 +14,7 @@
         <% category.gifs.each do |gif| %>
           <div id="img-<%=gif.id%>">
            <img src=<%= gif.image_path %>>
-           <%= link_to "<i class='far fa-heart'></i>".html_safe, favorites_path(gif_id: gif.id), method: 'post', title: 'Add to Favorites', class: 'heart' %>
+           <%= link_to "<i class='far fa-heart'></i>".html_safe, user_favorites_path(current_user, gif_id: gif.id), method: 'post', title: 'Add to Favorites', class: 'heart' %>
           </div>
         <% end %>
       </div>
