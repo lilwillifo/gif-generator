@@ -8,16 +8,15 @@ describe 'An admin' do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
         visit gifs_path
-        fill_in 'Category', with: 'cat'
-        click_on 'Generate Gif'
-        fill_in 'Category', with: 'dog'
+
+        fill_in 'Category', with: 'abc'
         click_on 'Generate Gif'
 
-        within '#cat' do
+        within '#abc' do
           click_on 'Delete Category'
         end
 
-        expect(page).to_not have_content('cat')
+        expect(page).to have_content('abc was deleted!')
       end
     end
   end

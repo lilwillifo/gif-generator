@@ -12,7 +12,7 @@ class Admin::GifsController < ApplicationController
     else
       flash[:notice] = 'Uh oh... something happened. Try again!'
     end
-    redirect_to gifs_path
+    redirect_to category_path(category)
   end
 
   private
