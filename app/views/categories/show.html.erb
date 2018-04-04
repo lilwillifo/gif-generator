@@ -12,5 +12,7 @@
     </div>
   <% end %>
   </div>
+<% if current_admin? %>
   Can't get enough??? <%= link_to 'Add another!', admin_gifs_path(category: @category.name), method: 'post' %>
+  <% end %>
 </main>

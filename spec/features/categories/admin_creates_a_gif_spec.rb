@@ -19,14 +19,12 @@ describe 'An admin' do
         admin = create(:admin)
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
-        category = create(:category)
-        category.gifs = create_list(:gif, 3)
+        category_1 = create(:category)
+        category_1.gifs = create_list(:gif, 3)
 
-        visit category_path(category)
+        visit category_path(category_1)
 
-        click_on("Add another!")
-
-        expect(category.gifs.count).to eq(4)
+        expect(page).to have_content('Add another!')
       end
     end
   end

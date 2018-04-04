@@ -22,12 +22,9 @@
         </div>
 
         <div class= 'all_gifs'>
-        <% category.gifs.each do |gif| %>
-          <div id="img-<%=gif.id%>">
-           <img src=<%= gif.image_path %>>
-           <%= link_to "<i class='far fa-heart'></i>".html_safe, user_favorites_path(current_user, gif_id: gif.id), method: 'post', title: 'Add to Favorites', class: 'heart' %>
+          <div id="img-<%=category.gifs.first.id%>">
+           <img src=<%= category.gifs.first.image_path %>>
           </div>
-        <% end %>
       </div>
     <% end %>
 
