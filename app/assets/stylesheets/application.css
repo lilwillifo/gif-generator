@@ -93,6 +93,10 @@ nav form {
   align-items: center;
 }
 
+.show_header a {
+  color: #3E6990;
+}
+
 .all_gifs {
   display: flex;
   flex-direction: row;

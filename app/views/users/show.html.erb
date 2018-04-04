@@ -2,7 +2,12 @@
 
   <section class='show_header'>
     <h1>Welcome, <%= current_user.username %>!</h1>
+    <% if current_user.gifs.empty? %>
+      <h2>GIF OUTTA HERE! Looks like you don't have any favorites yet!
+        <%= link_to "Let's fix that.", gifs_path %></h2>
+      <% else %>
     <h2>Your favorite gifs:</h2>
+    <% end %>
   </section>
 
 
