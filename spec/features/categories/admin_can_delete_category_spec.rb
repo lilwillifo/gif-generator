@@ -28,7 +28,6 @@ describe 'As a user' do
       it 'I cannot delete a category' do
         user = create(:user)
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-        category_1, category_2, category_3 = create_list(:category, 3)
 
         visit gifs_path
 

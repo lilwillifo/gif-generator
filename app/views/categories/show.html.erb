@@ -1,0 +1,18 @@
+<main class='show'>
+  <div class='@category_name' id=<%=@category.name%>>
+    <h2><%= @category.name.capitalize %>
+    <% if current_admin? %>
+      (<%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, category_path(@category), method: 'delete', title: 'Delete Category', class: 'trash' %>)
+    <% end %></h2>
+  </div><div class= 'all_gifs'>
+  <% @category.gifs.each do |gif| %>
+    <div id="img-<%=gif.id%>">
+     <img src=<%= gif.image_path %>>
+     <%= link_to "<i class='far fa-heart'></i>".html_safe, user_favorites_path(current_user, gif_id: gif.id), method: 'post', title: 'Add to Favorites', class: 'heart' %>
+    </div>
+  <% end %>
+  </div>
+<% if current_admin? %>
+  Can't get enough??? <%= link_to 'Add another!', admin_gifs_path(category: @category.name), method: 'post' %>
+  <% end %>
+</main>
