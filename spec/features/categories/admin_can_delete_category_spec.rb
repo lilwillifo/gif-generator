@@ -13,7 +13,7 @@ describe 'An admin' do
         fill_in 'Category', with: 'dog'
         click_on 'Generate Gif'
 
-        within '.cat' do
+        within '#cat' do
           click_on 'Delete Category'
         end
 
