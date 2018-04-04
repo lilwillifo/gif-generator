@@ -2,7 +2,7 @@ class GifsController < ApplicationController
   before_action :require_login
 
   def index
-    @categories = Category.all
+    @categories = Category.order(:name)
   end
 
   def update
