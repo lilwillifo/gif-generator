@@ -112,8 +112,7 @@ nav form {
 }
 
 .title {
-  font-family: 'impact';
-  font-size: 75px;
+  font-size: 55px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -156,12 +155,18 @@ a {
 footer {
   display: flex;
   align-items: center;
+  justify-content: center;
   position:absolute;
   bottom:0;
   width:100%;
   height:40px;
-  background-color: #565554;
+  background-color: black;
   color: #FFFFFF;
   font-size: 12px;
   flex: 1 0 auto;
+}
+
+footer img {
+  display: flex;
+  height: 30px;
 }
