@@ -109,6 +109,12 @@ nav form {
   flex-wrap: wrap;
 }
 
+.name_and_gif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .category_name {
   display: flex;
   flex-direction: column;
