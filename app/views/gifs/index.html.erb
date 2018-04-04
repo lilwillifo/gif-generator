@@ -20,7 +20,6 @@
             (<%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, category_path(category), method: 'delete', title: 'Delete Category', class: 'trash' %>)
           <% end %></h2>
         </div>
-
         <div class= 'all_gifs'>
           <div id="img-<%=category.gifs.first.id%>">
            <img src=<%= category.gifs.first.image_path %>>
