@@ -15,7 +15,7 @@
 
     <% @categories.each do |category| %>
         <div class='category_name' id=<%=category.name%>>
-          <h2><%= category.name %>
+          <h2><%= link_to category.name.capitalize, category_path(category) %>
           <% if current_admin? %>
             (<%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, category_path(category), method: 'delete', title: 'Delete Category', class: 'trash' %>)
           <% end %></h2>
