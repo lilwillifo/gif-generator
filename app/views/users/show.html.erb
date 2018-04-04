@@ -1,12 +1,12 @@
 <main class='show'>
 
-  <section>
+  <section class='show_header'>
     <h1>Welcome, <%= current_user.username %>!</h1>
-    <h3>Your favorite gifs:</h3>
+    <h2>Your favorite gifs:</h2>
   </section>
 
 
-    <% current_user.categories.each do |category| %>
+    <% current_user.categories.uniq.each do |category| %>
     <div class="category">
       <h3><%= category.name %></h3>
     </div>

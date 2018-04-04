@@ -87,6 +87,12 @@ nav form {
   left: 50%;
 }
 
+.show_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .all_gifs {
   display: flex;
   flex-direction: row;
