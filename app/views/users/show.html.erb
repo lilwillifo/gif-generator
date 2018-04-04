@@ -11,7 +11,7 @@
   </section>
 
 
-    <% current_user.categories.uniq.each do |category| %>
+    <% @categories.each do |category| %>
     <div class="category">
       <h3><%= link_to category.name.capitalize, category_path(category) %></h3>
     </div>

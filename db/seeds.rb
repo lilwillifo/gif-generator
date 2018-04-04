@@ -8,7 +8,7 @@
 
 User.create!(username: 'Margaret', password: 'test', role: 1)
 
-categories = ['cats', 'puppers', 'lol', 'programming', 'school']
+categories = ['cats', 'puppers', 'lol', 'programming', 'school', 'reaction', 'sandwich']
 categories.each do |category|
   category = Category.create!(name: category)
   4.times { CreateGif.call(category)}
