@@ -106,7 +106,7 @@ nav form {
   flex-wrap: wrap;
 }
 
-.category {
+.category_name {
   display: flex;
   flex-direction: column;
 }
