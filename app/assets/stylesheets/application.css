@@ -80,7 +80,7 @@ nav form {
   color: red;
 }
 
-.category {
+.generate_category {
   color: #FFFFFF;
   font-size: 20px;
   position: absolute;
@@ -93,6 +93,14 @@ nav form {
   margin: 20px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.gif {
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {

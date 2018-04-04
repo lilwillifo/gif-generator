@@ -2,28 +2,24 @@
 
 <h1>All Tha Gifs!</h1>
 
-  <div class= 'all_gifs'>
     <% @categories.each do |category| %>
-
-      <section class='gif'>
-
-        <div class=<%=category.name%>>
+        <div class='category' id=<%=category.name%>>
           <h2><%= category.name %>
           <% if current_admin? %>
             (<%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, category_path(category), method: 'delete', title: 'Delete Category', class: 'trash' %>)
           <% end %></h2>
         </div>
 
+        <div class= 'all_gifs'>
         <% category.gifs.each do |gif| %>
+          <section class='gif'>
           <div id="img-<%=gif.id%>">
            <img src=<%= gif.image_path %>>
            <%= link_to "<i class='far fa-heart'></i>".html_safe, favorites_path(gif_id: gif.id), method: 'post', title: 'Add to Favorites', class: 'heart' %>
           </div>
+        </section>
         <% end %>
       </div>
-      </section>
-
     <% end %>
-  </div>
 
 </main>
