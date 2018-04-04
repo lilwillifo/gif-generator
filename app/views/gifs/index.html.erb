@@ -12,12 +12,10 @@
 
         <div class= 'all_gifs'>
         <% category.gifs.each do |gif| %>
-          <section class='gif'>
           <div id="img-<%=gif.id%>">
            <img src=<%= gif.image_path %>>
            <%= link_to "<i class='far fa-heart'></i>".html_safe, favorites_path(gif_id: gif.id), method: 'post', title: 'Add to Favorites', class: 'heart' %>
           </div>
-        </section>
         <% end %>
       </div>
     <% end %>
