@@ -82,10 +82,9 @@ nav form {
 }
 
 .generate_category {
-  color: #FFFFFF;
   font-size: 20px;
-  position: absolute;
-  left: 50%;
+  display: flex;
+
 }
 
 .show_header {
@@ -129,6 +128,7 @@ nav form {
 
 .show h1{
   font-size: 40px;
+  margin: 0;
 }
 
 nav {
@@ -145,6 +145,21 @@ nav {
 .nav_link {
   margin: 20px;
   color: #FFFFFF;
+  text-decoration: none;
+}
+
+.root_link {
+  margin: 20px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+}
+
+.root_link:hover {
+  text-decoration: underline;
 }
 
 a {
