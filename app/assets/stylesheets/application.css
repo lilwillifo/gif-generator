@@ -81,6 +81,10 @@ nav form {
   color: red;
 }
 
+.icons {
+  color: white;
+}
+
 .generate_category {
   font-size: 20px;
   display: flex;
@@ -116,7 +120,7 @@ nav form {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #381D2A;
+  color: #290025;
 }
 
 .show {
@@ -150,7 +154,7 @@ nav {
 
 .root_link {
   margin: 20px;
-  font-size: 24px;
+  font-size: 30px;
   text-decoration: none;
 }
 
