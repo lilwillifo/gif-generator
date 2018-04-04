@@ -1,14 +1,5 @@
 <nav>
-  <%= link_to 'Son of a Gif!', root_path, class: 'nav_link' %>
-    <div class='generate_category'>
-      <%= form_tag admin_gifs_path do %>
-      <div class='form_field'>
-        <%= label_tag :category, 'Category' %>
-        <%= search_field_tag :category, 'puppers' %>
-      </div>
-        <%= submit_tag 'Generate Gif', class:'button' %>
-      <% end %>
-    </div>
+  <%= link_to 'Son of a Gif!', root_path, class: 'root_link' %>
       <div>
     <%= link_to 'Gifs', gifs_path, class: 'nav_link' %>
     <%= link_to  "Favorites", user_path(current_user), class: 'nav_link' %></li>
