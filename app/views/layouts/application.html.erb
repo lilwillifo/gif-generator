@@ -12,16 +12,19 @@
   <% if current_user.nil? %>
     <%= render partial: 'layouts/nav-welcome' %>
   <% elsif current_user.admin? %>
-  <%= render partial: 'layouts/nav-admin' %>
+    <%= render partial: 'layouts/nav-admin' %>
   <% else %>
     <%= render partial: 'layouts/nav-user' %>
   <% end %>
+
   <div class='flash'>
     <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: name %>
     <% end %>
   </div>
+
     <%= yield %>
+    
     <%= render partial: 'layouts/footer' %>
   </body>
 </html>
