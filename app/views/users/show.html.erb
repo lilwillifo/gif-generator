@@ -10,23 +10,6 @@
     <% end %>
   </section>
 
-
-    <% @categories.each do |category| %>
-    <div class="category">
-      <h3><%= link_to category.name.capitalize, category_path(category) %></h3>
-    </div>
-
-    <div class='all_gifs'>
-      <% category.gifs.each do |gif| %>
-        <% if current_user.gifs.include?(gif) %>
-          <div id="img-<%=gif.id%>">
-           <img src=<%= gif.image_path %>>
-           <%= link_to "<i class='far fa-times-circle'></i>".html_safe, gif_path(gif), method: 'put', title: 'Remove from Favorites', class: 'x' %>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-  <% end %>
-
+<%= render partial: 'gifs' %>
 
 </main>
